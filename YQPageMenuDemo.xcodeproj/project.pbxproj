@@ -11,6 +11,7 @@
 		411CF57F1B80E51B00AAC7B4 /* add remove.mov in Resources */ = {isa = PBXBuildFile; fileRef = 411CF57B1B80E51A00AAC7B4 /* add remove.mov */; };
 		411CF5801B80E51B00AAC7B4 /* change title color number.gif in Resources */ = {isa = PBXBuildFile; fileRef = 411CF57C1B80E51B00AAC7B4 /* change title color number.gif */; };
 		411CF5811B80E51B00AAC7B4 /* change title color number.mov in Resources */ = {isa = PBXBuildFile; fileRef = 411CF57D1B80E51B00AAC7B4 /* change title color number.mov */; };
+		418A1C251B80E8BB00F8FCDE /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 418A1C241B80E8BB00F8FCDE /* README.md */; };
 		41C29D771B7B75D5005AFBAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C29D761B7B75D5005AFBAA /* main.m */; };
 		41C29D7A1B7B75D5005AFBAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C29D791B7B75D5005AFBAA /* AppDelegate.m */; };
 		41C29D7D1B7B75D5005AFBAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C29D7C1B7B75D5005AFBAA /* ViewController.m */; };
@@ -36,6 +37,7 @@
 		411CF57B1B80E51A00AAC7B4 /* add remove.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "add remove.mov"; path = "screen/add remove.mov"; sourceTree = "<group>"; };
 		411CF57C1B80E51B00AAC7B4 /* change title color number.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "change title color number.gif"; path = "screen/change title color number.gif"; sourceTree = "<group>"; };
 		411CF57D1B80E51B00AAC7B4 /* change title color number.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "change title color number.mov"; path = "screen/change title color number.mov"; sourceTree = "<group>"; };
+		418A1C241B80E8BB00F8FCDE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		41C29D711B7B75D5005AFBAA /* YQPageMenuDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YQPageMenuDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C29D751B7B75D5005AFBAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41C29D761B7B75D5005AFBAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		41C29D681B7B75D5005AFBAA = {
 			isa = PBXGroup;
 			children = (
+				418A1C241B80E8BB00F8FCDE /* README.md */,
 				411CF5791B80D1F700AAC7B4 /* ScreenShot */,
 				41C29D731B7B75D5005AFBAA /* YQPageMenuDemo */,
 				41C29D8D1B7B75D5005AFBAA /* YQPageMenuDemoTests */,
@@ -258,6 +261,7 @@
 			files = (
 				41C29DA11B7B7A95005AFBAA /* YQPageMenuViewController.m in Sources */,
 				41C29D7D1B7B75D5005AFBAA /* ViewController.m in Sources */,
+				418A1C251B80E8BB00F8FCDE /* README.md in Sources */,
 				41C29D7A1B7B75D5005AFBAA /* AppDelegate.m in Sources */,
 				41C29D771B7B75D5005AFBAA /* main.m in Sources */,
 			);
