@@ -1,4 +1,4 @@
-#YQMENUPAGE
+#YQPageMenu
 
 ##Overview
 A pageview of menu.
