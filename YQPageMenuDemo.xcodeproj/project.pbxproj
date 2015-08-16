@@ -14,6 +14,7 @@
 		41C29D821B7B75D5005AFBAA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41C29D811B7B75D5005AFBAA /* Images.xcassets */; };
 		41C29D851B7B75D5005AFBAA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C29D831B7B75D5005AFBAA /* LaunchScreen.xib */; };
 		41C29D911B7B75D5005AFBAA /* YQPageMenuDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C29D901B7B75D5005AFBAA /* YQPageMenuDemoTests.m */; };
+		41C29DA11B7B7A95005AFBAA /* YQPageMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C29DA01B7B7A95005AFBAA /* YQPageMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		41C29D8A1B7B75D5005AFBAA /* YQPageMenuDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YQPageMenuDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C29D8F1B7B75D5005AFBAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41C29D901B7B75D5005AFBAA /* YQPageMenuDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQPageMenuDemoTests.m; sourceTree = "<group>"; };
+		41C29D9F1B7B7A95005AFBAA /* YQPageMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YQPageMenuViewController.h; path = YQPageMenu/YQPageMenuViewController.h; sourceTree = "<group>"; };
+		41C29DA01B7B7A95005AFBAA /* YQPageMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YQPageMenuViewController.m; path = YQPageMenu/YQPageMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		41C29D731B7B75D5005AFBAA /* YQPageMenuDemo */ = {
 			isa = PBXGroup;
 			children = (
+				41C29D9B1B7B78B8005AFBAA /* YQPageMenu */,
 				41C29D781B7B75D5005AFBAA /* AppDelegate.h */,
 				41C29D791B7B75D5005AFBAA /* AppDelegate.m */,
 				41C29D7B1B7B75D5005AFBAA /* ViewController.h */,
@@ -117,6 +121,15 @@
 				41C29D8F1B7B75D5005AFBAA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		41C29D9B1B7B78B8005AFBAA /* YQPageMenu */ = {
+			isa = PBXGroup;
+			children = (
+				41C29D9F1B7B7A95005AFBAA /* YQPageMenuViewController.h */,
+				41C29DA01B7B7A95005AFBAA /* YQPageMenuViewController.m */,
+			);
+			name = YQPageMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41C29DA11B7B7A95005AFBAA /* YQPageMenuViewController.m in Sources */,
 				41C29D7D1B7B75D5005AFBAA /* ViewController.m in Sources */,
 				41C29D7A1B7B75D5005AFBAA /* AppDelegate.m in Sources */,
 				41C29D771B7B75D5005AFBAA /* main.m in Sources */,
