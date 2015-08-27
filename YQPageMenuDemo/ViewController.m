@@ -7,10 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "YQPageMenuViewController.h"
+#import "YQPageMenuView.h"
 
 @interface ViewController ()
-@property (strong, nonatomic) YQPageMenuViewController *pmvc;
+//@property (strong, nonatomic) YQPageMenuViewController *pmvc;
+@property (strong, nonatomic) YQPageMenuView *pmv;
 @end
 
 @implementation ViewController{
@@ -18,12 +19,12 @@
     int title;
 }
 
-@synthesize pmvc;
+@synthesize pmv;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    pmvc = [[YQPageMenuViewController alloc] initWithFrame:(CGRect){50,200,300, 200} horizontalNumber:2 verticalNumber:2 menuTitle:@"sgssd"];
-    pmvc.tintColor = [UIColor redColor];
+    pmv = [[YQPageMenuView alloc] initWithFrame:(CGRect){(self.view.bounds.size.width - 300) / 2, 200, 300, 200} horizontalNumber:2 verticalNumber:2 menuTitle:@"sgssd"];
+    pmv.headColor = [UIColor redColor];
     UIButton *button1 = [[UIButton alloc] init];
     [button1 setBackgroundColor:[UIColor redColor]];
     [button1 setTitle:@"button1" forState:UIControlStateNormal];
@@ -44,11 +45,10 @@
     [button5 setBackgroundColor:[UIColor blueColor]];
     [button5 setTitle:@"button5" forState:UIControlStateNormal];
     [button5 addTarget:self action:@selector(perform:) forControlEvents:UIControlEventTouchUpInside];
-    [pmvc insertViewItems:@[button1, button2, button3, button4, button5]];
+    [pmv insertViewItems:@[button1, button2, button3, button4, button5]];
     
-    [self addChildViewController:pmvc];
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    [self.view addSubview:pmvc.view];
+    [self.view addSubview:pmv];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -65,10 +65,10 @@
 
 - (IBAction)changeColor:(id)sender {
     if (color) {
-        pmvc.tintColor = [UIColor greenColor];
+        pmv.headColor = [UIColor greenColor];
         color = 0;
     } else {
-        pmvc.tintColor = [UIColor blueColor];
+        pmv.headColor = [UIColor blueColor];
         color = 1;
     }
 }
@@ -94,11 +94,11 @@
     [button5 setBackgroundColor:[UIColor blueColor]];
     [button5 setTitle:@"button5" forState:UIControlStateNormal];
     [button5 addTarget:self action:@selector(perform:) forControlEvents:UIControlEventTouchUpInside];
-    [pmvc insertViewItems:@[button1, button2, button3, button4, button5]];
+    [pmv insertViewItems:@[button1, button2, button3, button4, button5]];
 }
 
 - (IBAction)removeAllItems:(id)sender {
-    [pmvc removeAllViewItems];
+    [pmv removeAllViewItems];
 }
 
 - (IBAction)addItem:(id)sender {
@@ -110,7 +110,7 @@
     if (index < 0) {
         index = 0;
     }
-    [pmvc insertViewItem:button1 atIndex:index];
+    [pmv insertViewItem:button1 atIndex:index];
 }
 
 - (IBAction)deleteItem:(id)sender {
@@ -118,22 +118,22 @@
     if (index < 0) {
         index = 0;
     }
-    [pmvc removeViewItemAtIndex:index];
+    [pmv removeViewItemAtIndex:index];
     
 }
 - (IBAction)changeTitle:(id)sender {
     if (title) {
-        pmvc.menuTitle = @"123";
+        pmv.menuTitle = @"123";
         title = 0;
     } else {
-        pmvc.menuTitle = @"345";
+        pmv.menuTitle = @"345";
         title = 1;
     }
 }
 
 - (IBAction)numberChange:(id)sender {
-    pmvc.horizontalNumber = (int)[self.horizontalNumber.text integerValue];
-    pmvc.verticalNumber = (int)[self.verticalNumber.text integerValue];
+    pmv.horizontalNumber = (int)[self.horizontalNumber.text integerValue];
+    pmv.verticalNumber = (int)[self.verticalNumber.text integerValue];
 }
 
 - (IBAction)textFieldDoneEditing:(id)sender {
