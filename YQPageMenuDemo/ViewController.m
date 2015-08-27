@@ -64,6 +64,7 @@
 }
 
 - (IBAction)changeColor:(id)sender {
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
     if (color) {
         pmv.headColor = [UIColor greenColor];
         color = 0;
@@ -74,6 +75,7 @@
 }
 
 - (IBAction)addItems:(id)sender {
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
     UIButton *button1 = [[UIButton alloc] init];
     [button1 setBackgroundColor:[UIColor redColor]];
     [button1 setTitle:@"button1" forState:UIControlStateNormal];
@@ -98,10 +100,12 @@
 }
 
 - (IBAction)removeAllItems:(id)sender {
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
     [pmv removeAllViewItems];
 }
 
 - (IBAction)addItem:(id)sender {
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
     UIButton *button1 = [[UIButton alloc] init];
     [button1 setBackgroundColor:[UIColor redColor]];
     [button1 setTitle:@"button1" forState:UIControlStateNormal];
@@ -114,6 +118,7 @@
 }
 
 - (IBAction)deleteItem:(id)sender {
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
     int index = (int)[self.removeIndex.text integerValue];
     if (index < 0) {
         index = 0;
@@ -122,6 +127,7 @@
     
 }
 - (IBAction)changeTitle:(id)sender {
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
     if (title) {
         pmv.menuTitle = @"123";
         title = 0;
@@ -132,6 +138,7 @@
 }
 
 - (IBAction)numberChange:(id)sender {
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
     pmv.horizontalNumber = (int)[self.horizontalNumber.text integerValue];
     pmv.verticalNumber = (int)[self.verticalNumber.text integerValue];
 }
