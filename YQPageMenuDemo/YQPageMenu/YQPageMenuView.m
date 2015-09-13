@@ -58,6 +58,11 @@
     return self;
 }
 
+#pragma mark - Scroll View Delegate Methods
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    self.pageIndex = _menuView.contentOffset.x / _menuView.frame.size.width;
+}
+
 #pragma mark - private method
 - (void)viewInit{
     CGSize bound = self.frame.size;
@@ -71,6 +76,7 @@
     _menuView.pagingEnabled = YES;
     _menuView.delegate = self;
     _menuView.clipsToBounds = NO;
+    _menuView.delegate = self;
     [self addSubview:_titleLable];
     [self addSubview:_menuView];
     [self addSubview:_pageIndicatorView];
@@ -313,6 +319,7 @@
 }
 
 - (void)setPageIndex:(int)pageIndex{
+    _pageIndex = pageIndex;
     if (_pageIndicatorView) {
         [self freshPageIndicatorView];
     }
